@@ -1,20 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Something Crazy</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/hib7phq.css">
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
 </head>
+
 <body>
-    <Button onclick="switchVideo()">Switch</Button>
-    <video id="dayVideo" width="320" height="240" controls>
-        <source src="/videos/Ninji_Day_Video.mp4" type="video/mp4">
-    </video>
-    <video id="nightVideo" width="320" height="240" controls>
-        <source src="/videos/Ninji_Night_Video.mp4" type="video/mp4">
-    </video>
+    <section class="mainview">
+        <h1>NINJI</h1>
+        <h2>Something Crazy</h2>
+
+        <button onclick="switchVideo()">Switch</button>
+        <video id="dayVideo" controls playsinline>
+            <source src="/videos/Ninji_Day_Video.mp4" type="video/mp4">
+        </video>
+        <video id="nightVideo" controls playsinline>
+            <source src="/videos/Ninji_Night_Video.mp4" type="video/mp4">
+        </video>
+    </section>
+    <section>
+        <h2>Listen now in your favorite streaming service</h2>
+        <div class="callforaction">
+            <img src="/images/icons8-spotify-100.png" alt="Spotify">
+            <img src="/images/icons8-music-100.png" alt="Apple Music">
+            <img src="/images/icons8-youtube-music-100.png" alt="Youtube Music">
+            <a href="https://soundcloud.com/user-155889369/something-crazy">
+                <img src="/images/icons8-soundcloud-100.png" alt="Soundcloud">
+            </a>
+        </div>
+    </section>
 </body>
 <script src="main.js"></script>
+
 </html>

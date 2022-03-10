@@ -5,38 +5,41 @@ dayVideo.autoplay = true
 nightVideo.autoplay = true
 
 dayVideo.muted = true
-// dayVideo.muted = false
 nightVideo.muted = true
-dayVideo.load()
-nightVideo.load()
-dayVideo.play()
-nightVideo.play()
+
+// dayVideo.load()
+// nightVideo.load()
+// dayVideo.play()
+// nightVideo.play()
 
 // nightVideo.play()
 
 function switchVideo() {
 
     if (dayVideo.style.display != "none") {
-       dayMode()
+        dayMode()
     }
-else {
-  nightMode()
+    else {
+        nightMode()
     }
 }
 
 function dayMode() {
     dayVideo.style.display = "none"
-    dayVideo.muted = true
     nightVideo.style.display = "block"
-    nightVideo.muted = false
+    alwaysOneVideoMuted()
 }
 function nightMode() {
     // alert(nightMode.currentTime)
-    nightVideo.currentTime = 5
+    nightVideo.currentTime = dayVideo.currentTime
     console.log("Hey")
     console.log(nightVideo.currentTime)
     nightVideo.style.display = "none"
-    nightVideo.muted = true
     dayVideo.style.display = "block"
+    alwaysOneVideoMuted()
+    
+}
+function alwaysOneVideoMuted() {
+    nightVideo.muted = true
     dayVideo.muted = false
 }
