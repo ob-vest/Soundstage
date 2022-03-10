@@ -1,6 +1,6 @@
 var dayVideo = document.getElementById("dayVideo")
 var nightVideo = document.getElementById("nightVideo")
-
+var button = document.getElementById("switcherButton")
 dayVideo.autoplay = true
 nightVideo.autoplay = true
 
@@ -15,27 +15,31 @@ nightVideo.muted = true
 // nightVideo.play()
 
 function switchVideo() {
-
-    if (dayVideo.style.display != "none") {
-        dayMode()
+const isDay = dayVideo.style.display != "none"
+    if (isDay) {
+        nightMode()
     }
     else {
-        nightMode()
+        dayMode()
     }
 }
 
 function dayMode() {
-    dayVideo.style.display = "none"
-    nightVideo.style.display = "block"
+    button.textContent = "Switch To Night ☾"
+    nightVideo.style.display = "none"
+    dayVideo.style.display = "block"
+
     alwaysOneVideoMuted()
 }
 function nightMode() {
+
     // alert(nightMode.currentTime)
+    button.textContent = "Switch To Day ☀️"
     nightVideo.currentTime = dayVideo.currentTime
-    console.log("Hey")
-    console.log(nightVideo.currentTime)
-    nightVideo.style.display = "none"
-    dayVideo.style.display = "block"
+    // console.log("Hey")
+    // console.log(nightVideo.currentTime)
+    dayVideo.style.display = "none"
+    nightVideo.style.display = "block"
     alwaysOneVideoMuted()
     
 }
