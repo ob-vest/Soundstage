@@ -25,7 +25,7 @@ const isDay = dayVideo.style.display != "none"
 }
 
 function dayMode() {
-    button.textContent = "Switch To Night ☾"
+    button.innerText = "Switch To Night ☾"
     nightVideo.style.display = "none"
     dayVideo.style.display = "block"
 
@@ -34,7 +34,7 @@ function dayMode() {
 function nightMode() {
 
     // alert(nightMode.currentTime)
-    button.textContent = "Switch To Day ☀️"
+    button.innerText = "Switch To Day ☀️"
     nightVideo.currentTime = dayVideo.currentTime
     // console.log("Hey")
     // console.log(nightVideo.currentTime)
