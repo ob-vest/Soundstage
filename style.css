@@ -75,6 +75,16 @@ h2 {
 .topnav ul {
     list-style: none;
     text-align: right;
+    white-space: nowrap;
+    padding: 0;
+}
+@media screen and (max-width: 500px) {
+    .topnav ul {
+        list-style: none;
+        text-align: center;
+        white-space: nowrap;
+        padding: 0;
+    }
 }
 .topnav li {
     display: inline-block;
@@ -82,14 +92,13 @@ h2 {
 
 /* Style the links inside the navigation bar */
 .topnav a {
-    float: left;
     color: aqua;
-    text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 18px;
     text-shadow: 1px 1px black;
   }
+
   /* Change the color of links on hover */
 /* .topnav a:hover {
     background-color: #ddd;
