@@ -1,9 +1,12 @@
 :root {
 --dayBackgroundColor: #FFFDD0
+
 }
 
 body {
     background-color: var(--dayBackgroundColor);
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    
 }
 
 h1 {
