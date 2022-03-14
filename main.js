@@ -15,7 +15,7 @@ nightVideo.muted = true
 // nightVideo.play()
 
 function switchVideo() {
-const isDay = dayVideo.style.display != "none"
+    const isDay = dayVideo.style.display != "none"
     if (isDay) {
         nightMode()
     }
@@ -41,9 +41,35 @@ function nightMode() {
     dayVideo.style.display = "none"
     nightVideo.style.display = "block"
     alwaysOneVideoMuted()
-    
+
 }
 function alwaysOneVideoMuted() {
     nightVideo.muted = true
     dayVideo.muted = false
 }
+
+nightVideo.onpause = function () {
+    dayVideo.pause()
+}
+nightVideo.onplay = function () {
+    dayVideo.play()
+}
+dayVideo.onpause = function () {
+    nightVideo.pause()
+}
+dayVideo.onplay = function () {
+    nightVideo.play()
+}
+nightVideo.addEventListener("timeupdate", whenTimeChanges)
+
+function whenTimeChanges() {
+    console.log("time changed")
+    const deviation = 2
+    if (nightVideo.style.display != "none") {
+        if (nightVideo.currentTime + deviation < dayVideo.currentTime || nightVideo.currentTime - deviation > dayVideo.currentTime) {
+            dayVideo.currentTime = nightVideo.currentTime
+        }
+    }
+
+}
+
