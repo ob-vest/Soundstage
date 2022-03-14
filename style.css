@@ -71,13 +71,13 @@ h2 {
     background-color: aqua;
     box-shadow:  5px 10px;
 }
-.topnav {
-   float: right;
 
-    /* background-color: #333; */
-    overflow: hidden;
-  /* margin-left: auto; */
-
+.topnav ul {
+    list-style: none;
+    text-align: right;
+}
+.topnav li {
+    display: inline-block;
 }
 
 /* Style the links inside the navigation bar */
