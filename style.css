@@ -33,6 +33,7 @@ h1 {
     font-weight: 700;
     font-style: normal;
     margin: 0px;
+    margin-bottom: -10px;
 }
 
 h2 {
@@ -96,47 +97,4 @@ h2 {
     margin: 40px auto 40px auto;
     background-color: var(--accentColor);
     box-shadow: 5px 10px var(--primaryColor);
-}
-
-.topnav ul {
-    list-style: none;
-    text-align: right;
-    white-space: nowrap;
-    padding: 0;
-}
-
-@media screen and (max-width: 500px) {
-    .topnav ul {
-        list-style: none;
-        text-align: center;
-        white-space: nowrap;
-        padding: 0;
-    }
-}
-
-.topnav li {
-    display: inline-block;
-}
-
-/* Style the links inside the navigation bar */
-.topnav a {
-    color: var(--accentColor);
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 18px;
-    text-shadow: 1px 1px black;
-}
-
-/* Change the color of links on hover */
-/* .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-  } */
-/* Add a color to the active/current link */
-.topnav a.active {
-    /* background-color: #04AA6D; */
-    text-decoration: underline;
-    text-underline-offset: 10px;
-    /* color: rgb(0, 0, 0);
-    text-shadow: 1px 1px aqua; */
 }
