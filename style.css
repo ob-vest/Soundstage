@@ -6,10 +6,10 @@
     --contrastColor: var(--nightPrimaryColor);
     /* Themes for global variables */
     --dayBackgroundColor: #FFFDD0;
-    --dayAccentColor: aqua;
+    --dayAccentColor: #73c7d3;
     --dayPrimaryColor: black;
     --nightBackgroundColor: rgb(0, 0, 0);
-    --nightAccentColor: #9c74fa;
+    --nightAccentColor: #be7a3d;
     --nightPrimaryColor: white;
 }
 
