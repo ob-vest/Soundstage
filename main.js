@@ -22,6 +22,8 @@ function switchVideo() {
     else {
         dayMode()
     }
+    // setColors must be executed last since the code above changes the currently displayed video
+    setColors()
 }
 
 function dayMode() {
@@ -41,7 +43,6 @@ function nightMode() {
     dayVideo.style.display = "none"
     nightVideo.style.display = "block"
     alwaysOneVideoMuted()
-
 }
 function alwaysOneVideoMuted() {
     nightVideo.muted = true
@@ -72,4 +73,19 @@ function whenTimeChanges() {
     }
 
 }
+function setColors() {
+    const isDay = dayVideo.style.display != "none"
+    if (isDay) {
+        document.documentElement.style.setProperty("--backgroundColor", "var(--dayBackgroundColor)")
+        document.documentElement.style.setProperty("--accentColor", "var(--dayAccentColor)")
+        document.documentElement.style.setProperty("--primaryColor", "var(--dayPrimaryColor)")
+        document.documentElement.style.setProperty("--contrastColor", "var(--nightPrimaryColor)")
 
+    } else {
+        document.documentElement.style.setProperty("--backgroundColor", "var(--nightBackgroundColor)")
+        document.documentElement.style.setProperty("--accentColor", "var(--nightAccentColor)")
+        document.documentElement.style.setProperty("--primaryColor", "var(--nightPrimaryColor)")
+        document.documentElement.style.setProperty("--contrastColor", "var(--dayPrimaryColor)")
+        // document.documentElement
+    }
+}

@@ -1,15 +1,32 @@
 :root {
---dayBackgroundColor: #FFFDD0
+    /* Global variables */
+    --backgroundColor: var(--dayBackgroundColor);
+    --accentColor: var(--dayAccentColor);
+    --primaryColor: var(--dayPrimaryColor);
+    --contrastColor: var(--nightPrimaryColor);
+    /* Themes for global variables */
+    --dayBackgroundColor: #FFFDD0;
+    --dayAccentColor: aqua;
+    --dayPrimaryColor: black;
+    --nightBackgroundColor: rgb(0, 0, 0);
+    --nightAccentColor: #9c74fa;
+    --nightPrimaryColor: white;
+}
 
+html {
+    /* Prevents accidental zooms when fast pressing buttons */
+    -webkit-text-size-adjust: none;
+    touch-action: manipulation;
 }
 
 body {
-    background-color: var(--dayBackgroundColor);
+    background-color: var(--backgroundColor);
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    
+
 }
 
 h1 {
+    color: var(--primaryColor);
     font-size: 10vw;
     text-align: center;
     font-family: rig-solid-bold-fill, sans-serif;
@@ -19,6 +36,7 @@ h1 {
 }
 
 h2 {
+    color: var(--primaryColor);
     font-size: 5vw;
     text-align: center;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -36,25 +54,32 @@ h2 {
 }
 
 .mainview button {
-    
+
     font-weight: bolder;
-    color: antiquewhite;
+    color: var(--contrastColor);
     display: block;
     margin: 10px auto 10px auto;
     padding: 10px;
     width: 200px;
     height: 50px;
     border: none;
-    background-color: #000000;
+    background-color: var(--primaryColor);
     border-radius: 10px;
 }
 
 .mainview video {
     display: block;
     margin: auto;
-    border: 3px solid #fff;
+    border: 3px solid var(--primaryColor);
     border-radius: 10px;
     width: 70%;
+    padding: 0;
+}
+
+@media screen and (max-width: 500px) {
+    .mainview video {
+        width: 90%;
+    }
 }
 
 .callforaction {
@@ -65,11 +90,12 @@ h2 {
 .callforaction img {
     width: 5em;
 }
+
 .headline {
     border-radius: 20px 0px 20px 0px;
     margin: 40px auto 40px auto;
-    background-color: aqua;
-    box-shadow:  5px 10px;
+    background-color: var(--accentColor);
+    box-shadow: 5px 10px var(--primaryColor);
 }
 
 .topnav ul {
@@ -78,6 +104,7 @@ h2 {
     white-space: nowrap;
     padding: 0;
 }
+
 @media screen and (max-width: 500px) {
     .topnav ul {
         list-style: none;
@@ -86,29 +113,30 @@ h2 {
         padding: 0;
     }
 }
+
 .topnav li {
     display: inline-block;
 }
 
 /* Style the links inside the navigation bar */
 .topnav a {
-    color: aqua;
+    color: var(--accentColor);
     padding: 14px 16px;
     text-decoration: none;
     font-size: 18px;
     text-shadow: 1px 1px black;
-  }
+}
 
-  /* Change the color of links on hover */
+/* Change the color of links on hover */
 /* .topnav a:hover {
     background-color: #ddd;
     color: black;
   } */
-  /* Add a color to the active/current link */
+/* Add a color to the active/current link */
 .topnav a.active {
     /* background-color: #04AA6D; */
     text-decoration: underline;
     text-underline-offset: 10px;
     /* color: rgb(0, 0, 0);
     text-shadow: 1px 1px aqua; */
-  }
+}
