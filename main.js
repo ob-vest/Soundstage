@@ -11,12 +11,13 @@ nightVideo.muted = true
 // nightVideo.load()
 // dayVideo.play()
 
-// function playVideo() {
-// dayVideo.play()
-// nightVideo.play()
-// }
+function playVideo() {
+dayVideo.play()
+nightVideo.play()
+}
 function switchVideo() {
     const isDay = dayVideo.style.display != "none"
+    playVideo()
     if (isDay) {
         nightMode()
     }
