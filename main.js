@@ -1,19 +1,20 @@
 var dayVideo = document.getElementById("dayVideo")
 var nightVideo = document.getElementById("nightVideo")
 var button = document.getElementById("switcherButton")
-dayVideo.autoplay = true
-nightVideo.autoplay = true
+// dayVideo.autoplay = true
+// nightVideo.autoplay = true
 
-dayVideo.muted = true
+// dayVideo.muted = true
 nightVideo.muted = true
 
 // dayVideo.load()
 // nightVideo.load()
 // dayVideo.play()
-// nightVideo.play()
 
+// function playVideo() {
+// dayVideo.play()
 // nightVideo.play()
-
+// }
 function switchVideo() {
     const isDay = dayVideo.style.display != "none"
     if (isDay) {
