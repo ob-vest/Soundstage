@@ -29,7 +29,8 @@ function switchVideo() {
 }
 
 function dayMode() {
-    button.innerText = "Switch To Night ☾"
+    // button.innerText = "Switch To Night ☾"
+    document.body.style.backgroundImage = "url('images/Day_Blurred.jpg')"
     nightVideo.style.display = "none"
     dayVideo.style.display = "block"
 
@@ -38,7 +39,9 @@ function dayMode() {
 function nightMode() {
 
     // alert(nightMode.currentTime)
-    button.innerText = "Switch To Day ☀️"
+    // button.innerText = "Switch To Day ☀️"
+    document.body.style.backgroundImage = "url('images/Night_Blurred.jpg')"
+    // document.getElementsByTagName("body")[0].background-image = 
     nightVideo.currentTime = dayVideo.currentTime
     // console.log("Hey")
     // console.log(nightVideo.currentTime)
